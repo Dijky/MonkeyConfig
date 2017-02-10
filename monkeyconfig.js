@@ -259,7 +259,7 @@ function MonkeyConfig() {
     function saveClick() {
         for (name in params) {
             if (!params.hasOwnProperty(name)) {
-                console.log("skipping "+name);
+                console.log("skipping ", name);
                 continue;
             }
             console.log("saving ", params[name]);
