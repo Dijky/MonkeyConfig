@@ -257,6 +257,8 @@ function MonkeyConfig() {
      * Save button click event handler
      */
     function saveClick() {
+        console.log(params);
+        console.log(values);
         for (name in params) {
             if (!params.hasOwnProperty(name)) {
                 continue;
