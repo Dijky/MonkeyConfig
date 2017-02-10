@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name           MonkeyConfig
-// @namespace      http://odyniec.net/
+// @author         odyniec
+// @contributor    dijky
+// @namespace      https://github.com/dijky/MonkeyConfig
 // @description    Easy configuration dialog builder for user scripts
 // @include        *
 // ==/UserScript==
@@ -195,6 +197,9 @@ function MonkeyConfig() {
             return;
         
         for (var name in params) {
+            if (!params.hasOwnProperty(name)) {
+                continue;
+            }
             var value = values[name];
             
             switch (params[name].type) {
@@ -253,6 +258,9 @@ function MonkeyConfig() {
      */
     function saveClick() {
         for (name in params) {
+            if (!params.hasOwnProperty(name)) {
+                continue;
+            }
             switch (params[name].type) {
             case 'checkbox':
                 var elem = container.querySelector('[name="' + name + '"]');
