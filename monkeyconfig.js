@@ -257,12 +257,12 @@ function MonkeyConfig() {
      * Save button click event handler
      */
     function saveClick() {
-        console.log(params);
-        console.log(values);
         for (name in params) {
             if (!params.hasOwnProperty(name)) {
+                console.log("skipping "+name);
                 continue;
             }
+            console.log("saving ", params[name]);
             switch (params[name].type) {
             case 'checkbox':
                 var elem = container.querySelector('[name="' + name + '"]');
