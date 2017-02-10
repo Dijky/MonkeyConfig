@@ -257,7 +257,8 @@ function MonkeyConfig() {
      * Save button click event handler
      */
     function saveClick() {
-        for (name in params) {
+        console.log(params);
+        for (var name in params) {
             if (!params.hasOwnProperty(name)) {
                 console.log("skipping ", name);
                 continue;
